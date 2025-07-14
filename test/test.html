@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>鼠标跟随小点点DEMO</title>
+  <style>
+    html, body { margin:0; padding:0; height:100%; }
+    #mouse-dots {
+      position: fixed;
+      left: 0; top: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="mouse-dots"></canvas>
+  <script src="test.js"></script>
+</body>
+</html> 

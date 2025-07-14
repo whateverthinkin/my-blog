@@ -93,7 +93,6 @@ window.addEventListener('load', function() {
         dot.y += (y - dot.y) * 0.18;
         x = dot.x;
         y = dot.y;
-        // 彩色渐变，HSL色相随索引变化
         const hue = (i * 360 / DOTS_NUM + Date.now() / 20) % 360;
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, DOTS_SIZE - i * 0.25, 0, Math.PI * 2);
