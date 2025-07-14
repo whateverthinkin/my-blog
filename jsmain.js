@@ -12,7 +12,8 @@ async function fetchPostList() {
   } catch {
     // Fallback: 兼容本地开发环境，手动列举
     return [
-      { title: "我的第一篇博客", file: "posts/first-post.md" }
+      { title: "我的第一篇博客", file: "posts/first-post.md" },
+      { title: "我的第二篇博客", file: "posts/Desert.md" }
     ];
   }
 }
