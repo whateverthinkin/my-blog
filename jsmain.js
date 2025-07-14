@@ -2,12 +2,24 @@ const postList = document.getElementById("post-list");
 const content = document.getElementById("content");
 const md = window.markdownit();
 
-const posts = [
-  { title: "第一次写博客", file: "posts/first-post.md" },
-  { title: "另一个技术文章", file: "posts/another-post.md" }
-];
+// 自动化文章管理：自动扫描 posts 文件夹下所有 .md 文件
+async function fetchPostList() {
+  // 假设有一个 posts.json 文件，实际生产环境需后端支持或构建时生成
+  try {
+    const res = await fetch('posts/posts.json');
+    const list = await res.json();
+    return list;
+  } catch {
+    // Fallback: 兼容本地开发环境，手动列举
+    return [
+      { title: "我的第一篇博客", file: "posts/first-post.md" }
+    ];
+  }
+}
 
-function loadPostList() {
+async function loadPostList() {
+  const posts = await fetchPostList();
+  postList.innerHTML = '';
   for (let post of posts) {
     const li = document.createElement("li");
     const a = document.createElement("a");
