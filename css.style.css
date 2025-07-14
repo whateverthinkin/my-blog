@@ -8,10 +8,25 @@ body {
 }
 
 header {
-  background: #2c3e50;
+  background: url('img_v3_02o1_6a7d2ce8-c344-48e9-a84b-e6858cc4519g.png') center/cover no-repeat, #2c3e50;
   color: white;
   padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(44,62,80,0.55); /* 深色半透明遮罩，保证文字可读 */
+  pointer-events: none;
+  z-index: 1;
+}
+
+header > * {
+  position: relative;
+  z-index: 2;
 }
 
 main {
