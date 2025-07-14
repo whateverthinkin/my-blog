@@ -15,11 +15,13 @@ header {
 }
 
 main {
-  padding: 20px;
+  padding: 32px 24px;
   max-width: 800px;
-  margin: auto;
-  background: white;
+  margin: 32px auto;
+  background: #fff;
   min-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
 }
 
 footer {
@@ -29,8 +31,10 @@ footer {
   color: #666;
 }
 
-h1, h2 {
-  margin-top: 0;
+h1, h2, h3, h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
 }
 
 ul {
@@ -49,4 +53,59 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin: 1em 0;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+blockquote {
+  border-left: 4px solid #2980b9;
+  background: #f0f8ff;
+  color: #555;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+pre, code {
+  background: #f4f4f4;
+  border-radius: 6px;
+  padding: 0.2em 0.5em;
+  font-family: "Fira Mono", "Consolas", monospace;
+  color: #c7254e;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+img {
+  display: block;
+  max-width: 90%;
+  margin: 24px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(44, 62, 80, 0.10);
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 32px rgba(44, 62, 80, 0.18);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 12px 4px;
+    margin: 8px;
+    border-radius: 8px;
+  }
+  img {
+    max-width: 100%;
+    margin: 12px auto;
+  }
 }
